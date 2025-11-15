@@ -12,7 +12,12 @@ import {
   Users,
   Filter,
   Ticket,
-  Star
+  Star,
+  Zap,
+  Music,
+  Users2,
+  Palette,
+  UtensilsCrossed
 } from 'lucide-react';
 
 const EventsPage = () => {
@@ -118,12 +123,12 @@ const EventsPage = () => {
   }, []);
 
   const categories = [
-    { id: 'all', name: 'All Events', color: 'bg-gray-100 text-gray-700' },
-    { id: 'technology', name: 'Technology', color: 'bg-blue-100 text-blue-700' },
-    { id: 'music', name: 'Music', color: 'bg-purple-100 text-purple-700' },
-    { id: 'business', name: 'Business', color: 'bg-green-100 text-green-700' },
-    { id: 'art', name: 'Art', color: 'bg-pink-100 text-pink-700' },
-    { id: 'food', name: 'Food & Drink', color: 'bg-orange-100 text-orange-700' }
+    { id: 'all', name: 'All Events', icon: Filter, color: 'bg-gray-100 text-gray-700' },
+    { id: 'technology', name: 'Technology', icon: Zap, color: 'bg-blue-100 text-blue-700' },
+    { id: 'music', name: 'Music', icon: Music, color: 'bg-purple-100 text-purple-700' },
+    { id: 'business', name: 'Business', icon: Users2, color: 'bg-green-100 text-green-700' },
+    { id: 'art', name: 'Visual Arts', icon: Palette, color: 'bg-pink-100 text-pink-700' },
+    { id: 'food', name: 'Food & Drink', icon: UtensilsCrossed, color: 'bg-orange-100 text-orange-700' }
   ];
 
   const filteredEvents = events.filter(event => {
@@ -176,21 +181,22 @@ const EventsPage = () => {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category.id}
-                variant={selectedCategory === category.id ? "default" : "outline"}
-                size="sm"
                 onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? 
-                  'gradient-orange text-white' : 
-                  'hover:bg-orange-50 hover:text-orange-600 hover:border-orange-300'
-                }
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
+                  selectedCategory === category.id 
+                    ? category.id === 'all'
+                      ? 'bg-black text-white'
+                      : 'bg-white text-black border-2 border-gray-800'
+                    : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-400'
+                }`}
               >
-                <Filter className="w-4 h-4 mr-2" />
+                <category.icon className="w-5 h-5" />
                 {category.name}
-              </Button>
+              </button>
             ))}
           </div>
         </div>

@@ -78,13 +78,12 @@ const LandingPage = () => {
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-6xl lg:text-8xl font-black text-gray-900 leading-tight">
                   QR Code
-                  <span className="block gradient-orange bg-clip-text text-transparent">
-                    Ticketing
-                  </span>
-                  <span className="block text-4xl lg:text-5xl text-gray-700">
-                    Revolution
+                  <span className="block text-5xl lg:text-6xl">
+                    <span className="bg-orange-500 text-white px-8 py-3 inline-block w-full text-center">
+                      Revolution
+                    </span>
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
@@ -112,7 +111,7 @@ const LandingPage = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxRUiUyMGNvZGV8ZW58MHx8fHwxNzU4NDYzNDEyfDA&ixlib=rb-4.1.0&q=85"
+                  src="/qr-hero.jpg"
                   alt="QR Code on Smartphone"
                   className="w-full h-[500px] object-cover"
                 />
@@ -220,34 +219,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-        
-      {/* CTA Section */}
-      <section className="py-20 gradient-orange">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-white">
-              Ready to Transform Your Events?
-            </h2>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto">
-              Join thousands of event organizers who trust QRush for their ticketing needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/auth">
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-3 h-auto font-semibold">
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              <Link to="/events">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 text-lg px-8 py-3 h-auto">
-                  Browse Events
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -293,14 +264,14 @@ const LandingPage = () => {
               <h3 className="font-semibold text-lg mb-4">Contact</h3>
               <div className="space-y-2 text-gray-400">
                 <p>support@qrush.com</p>
-                <p>1-800-QRUSH-1</p>
+                <p>+63-969-367-8827</p>
                 <p>Available 24/7</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QRush. All rights reserved.</p>
+            <p>&copy; 2025 QRush. All rights reserved.</p>
           </div>
         </div>
       </footer>
